@@ -1,0 +1,65 @@
+[
+  {
+    "datasetId": "terraform_2_team_league_raw",
+    "datasetRegion": "asia-east1",
+    "datasetFriendlyName": "Team league Dataset containing raw data",
+    "datasetDescription": "Team league raw Dataset description",
+    "datasetLabels": {
+      "label1": "value1",
+      "label2": "value2"
+    },
+    "tables": [
+      {
+        "tableId": "team_stat_raw",
+        "tableSchemaPath": "resource/schema/team_league_raw/team_stat_raw.json",
+        "tableLabels": {
+          "label1": "value1",
+          "label2": "value2"
+        }
+      }
+    ]
+  },
+  {
+    "datasetId": "terraform_2_team_league",
+    "datasetRegion": "asia-east1",
+    "datasetFriendlyName": "Team league Dataset containing domain data",
+    "datasetDescription": "Team league domain Dataset description",
+    "tables": [
+      {
+        "tableId": "team_stat",
+        "tableSchemaPath": "resource/schema/team_league/team_stat.json",
+        "partitionType": "DAY",
+        "partitionField": "ingestionDate",
+        "clustering": [
+          "teamName",
+          "teamSlogan"
+        ]
+      }
+    ]
+  },
+  {
+    "datasetId": "terraform_2_cm_demo",
+    "datasetRegion": "asia-east1",
+    "datasetFriendlyName": "Cm demo purpose Dataset",
+    "datasetDescription": "Cm demo purposet description",
+    "datasetLabels": {
+      "label1": "value1",
+      "label2": "value2"
+    },
+    "tables": [
+      {
+        "tableId": "cm_info",
+        "tableSchemaPath": "resource/schema/cm_demo/cm_info.json",
+        "partitionType": "DAY",
+        "partitionField": "creation_date",
+        "clustering": [
+          "company_name"
+        ],
+        "tableLabels": {
+          "label1": "value1",
+          "label2": "value2"
+        }
+      }
+    ]
+  }
+]

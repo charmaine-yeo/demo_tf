@@ -1,0 +1,14 @@
+[
+  {
+    "name": "company_name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Company name"
+  },
+  {
+    "name": "creation_date",
+    "type": "DATE",
+    "mode": "NULLABLE",
+    "description": "Create date"
+  }
+]
